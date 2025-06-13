@@ -1,0 +1,77 @@
+{% load static%}
+<section class="offers-section">
+  <h2 class="section-title">Nuestras Ofertas</h2>
+  <p class="section-subtitle">No te pierdas estas promociones especiales.</p>
+
+  <div class="offers-container">
+    <div class="offers-row">
+      <div class="offer-card offer-card-wide">
+        <div class="card-image">
+          <img
+            src="{% static 'shop/img/offers/cafe_del_dia.jpeg' %}"
+            alt="Café del Día"
+          />
+          <h3 class="card-title-overlay">Café del Día</h3>
+          <div class="card-info-overlay">
+            <p class="card-description">Cada Día un Sabor Nuevo</p>
+            <p class="card-price">PRECIO: $2.99</p>
+            <p class="card-discount-code">
+              CÓDIGO DE DESCUENTO **DAILYCOFFEE**
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="offer-card offer-card-narrow">
+        <div class="card-image">
+          <img
+            src="{% static 'shop/img/offers/desayuno_expres.jpeg' %}"
+            alt="Desayuno Expres"
+          />
+          <h3 class="card-title-overlay">Desayuno Exprés</h3>
+          <div class="card-info-overlay">
+            <p class="card-description">Café + Panqueques</p>
+            <p class="card-price">PRECIO: $5.50</p>
+            <div class="time-badge">
+              <i class="fas fa-clock"></i> Solo lunes y miércoles
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offers-row">
+      <div class="offer-card offer-card-narrow">
+        <div class="card-image">
+          <img
+            src="{% static 'shop/img/offers/postre_especial.jpeg' %}"
+            alt="Postre Especial"
+          />
+          <h3 class="card-title-overlay">Postre Especial</h3>
+          <div class="card-info-overlay">
+            <p class="card-description">Delicia diaria</p>
+            <p class="card-price">PRECIO: $3.50</p>
+            <p class="card-discount-code">CÓDIGO DE DESCUENTO **SWEETTREAT**</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="offer-card offer-card-wide">
+        <div class="card-image">
+          <img
+            src="{% static 'shop/img/offers/combo_premium.jpeg' %}"
+            alt="Combo Familiar Weekend"
+          />
+          <h3 class="card-title-overlay">Combo Familiar</h3>
+          <div class="card-info-overlay">
+            <p class="card-description">4 cafés + 3 postres + 2 smoothies</p>
+            <p class="card-price">PRECIO: $14.99</p>
+            <div class="time-badge">
+              <i class="fas fa-clock"></i> Solo fines de semana
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

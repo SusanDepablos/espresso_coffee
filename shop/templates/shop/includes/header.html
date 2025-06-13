@@ -1,0 +1,30 @@
+{% load static %}
+<header id="header">
+  <div class="nav-content">
+    <div class="icon-wrapper">
+      <img
+        class="icon"
+        src="{% static 'shop/img/icon.png' %}"
+        width="40"
+        height="40"
+        alt="coffee-icon"
+      />
+    </div>
+
+    <!-- Botón hamburguesa (solo visible en móvil) -->
+    <button class="hamburger-btn" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="{% url 'index'%}">Inicio</a></li>
+        <li><a href="{% url 'menu'%}">Menú</a></li>
+        <li><a href="#">Ordena Online</a></li>
+      </ul>
+      <a href="#" class="contact-button">Contáctenos &rarr;</a>
+    </nav>
+  </div>
+</header>

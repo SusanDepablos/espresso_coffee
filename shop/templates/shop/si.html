@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'shop/img/icon.png' %}"
+      type="image/x-icon"
+    />
+    <title>Espresso Coffee</title>
+    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="nav-content">
+        <div class="icon-wrapper">
+          <img
+            class="icon"
+            src="{% static 'shop/img/icon.png' %}"
+            width="40"
+            height="40"
+            alt="coffee-icon"
+          />
+        </div>
+
+        <!-- Botón hamburguesa (solo visible en móvil) -->
+        <button class="hamburger-btn" aria-label="Menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="{% url 'menu'%}">Menú</a></li>
+            <li><a href="#">Ordena Online</a></li>
+          </ul>
+          <a href="#" class="contact-button">Contáctenos &rarr;</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="background">
+          <img src="{% static 'shop/img/background.jpeg' %}" alt="coffee" />
+        </div>
+
+        <div class="hero-content">
+          <p class="subtitle">Disfruta de Aromas y Sabores Únicos</p>
+          <h1 class="hero-title">
+            Espresso Coffee: Tu Experiencia de Café Ideal
+          </h1>
+          <p class="description">
+            Descubre nuestra selección de café premium, deliciosos menús y
+            promociones exclusivas. Ordena y paga online de manera fácil y
+            rápida.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Ordenar Ahora</a>
+            <a href="#" class="btn btn-secondary">Ver el Menú &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <h2 class="faq-title">Preguntas Frecuentes</h2>
+        <p class="faq-subtitle">
+          Encuentra respuestas a las preguntas más comunes sobre Espresso
+          Coffee.
+        </p>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <p class="question">
+              <i class="fas fa-question-circle"></i> ¿Dónde se encuentra
+              Espresso Coffee?
+            </p>
+            <p class="answer">Puedes encontrarnos en Rubio. ¡Te esperamos!</p>
+          </div>
+          <div class="faq-item">
+            <p class="question">
+              <i class="fas fa-question-circle"></i> ¿Cuáles son los horarios de
+              atención?
+            </p>
+            <p class="answer">
+              Estamos abiertos de 7:00 am a 6:00 pm, todos los días.
+            </p>
+          </div>
+          <div class="faq-item">
+            <p class="question">
+              <i class="fas fa-question-circle"></i> ¿Ofrecen servicio a
+              domicilio?
+            </p>
+            <p class="answer">
+              Sí, ofrecemos servicio a domicilio. ¡Ordena en línea y disfruta en
+              casa!
+            </p>
+          </div>
+          <div class="faq-item">
+            <p class="question">
+              <i class="fas fa-question-circle"></i> ¿Qué métodos de pago
+              aceptan?
+            </p>
+            <p class="answer">
+              Tenemos punto de venta y aceptamos pago móvil a BCV.
+            </p>
+          </div>
+        </div>
+
+        <!-- <div class="faq-contact">
+                <p>¿No encontraste la respuesta que buscabas?</p>
+                <a href="#" class="btn btn-faq-contact">Contacta con Soporte</a>
+            </div> -->
+      </section>
+
+      <section class="offers-section">
+        <h2 class="section-title">Nuestras Ofertas</h2>
+        <p class="section-subtitle">
+          No te pierdas estas promociones especiales.
+        </p>
+
+        <div class="offers-container">
+          <div class="offers-row">
+            <div class="offer-card offer-card-wide">
+              <div class="card-image">
+                <img
+                  src="{% static 'shop/img/offers/cafe_del_dia.jpeg' %}"
+                  alt="Café del Día"
+                />
+                <h3 class="card-title-overlay">Café del Día</h3>
+                <div class="card-info-overlay">
+                  <p class="card-description">Cada Día un Sabor Nuevo</p>
+                  <p class="card-price">PRECIO: $2.99</p>
+                  <p class="card-discount-code">
+                    CÓDIGO DE DESCUENTO **DAILYCOFFEE**
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="offer-card offer-card-narrow">
+              <div class="card-image">
+                <img
+                  src="{% static 'shop/img/offers/desayuno_expres.jpeg' %}"
+                  alt="Desayuno Expres"
+                />
+                <h3 class="card-title-overlay">Desayuno Exprés</h3>
+                <div class="card-info-overlay">
+                  <p class="card-description">Café + Panqueques</p>
+                  <p class="card-price">PRECIO: $5.50</p>
+                  <div class="time-badge">
+                    <i class="fas fa-clock"></i> Solo lunes y miércoles
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="offers-row">
+            <div class="offer-card offer-card-narrow">
+              <div class="card-image">
+                <img
+                  src="{% static 'shop/img/offers/postre_especial.jpeg' %}"
+                  alt="Postre Especial"
+                />
+                <h3 class="card-title-overlay">Postre Especial</h3>
+                <div class="card-info-overlay">
+                  <p class="card-description">Delicia diaria</p>
+                  <p class="card-price">PRECIO: $3.50</p>
+                  <p class="card-discount-code">
+                    CÓDIGO DE DESCUENTO **SWEETTREAT**
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="offer-card offer-card-wide">
+              <div class="card-image">
+                <img
+                  src="{% static 'shop/img/offers/combo_premium.jpeg' %}"
+                  alt="Combo Familiar Weekend"
+                />
+                <h3 class="card-title-overlay">Combo Familiar</h3>
+                <div class="card-info-overlay">
+                  <p class="card-description">
+                    4 cafés + 3 postres + 2 smoothies
+                  </p>
+                  <p class="card-price">PRECIO: $14.99</p>
+                  <div class="time-badge">
+                    <i class="fas fa-clock"></i> Solo fines de semana
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="carousel-section">
+        <div class="section-header">
+          <h2 class="section-title">Nuestro Espacio, Tu Café</h2>
+          <p class="section-subtitle">
+            Explora las fotos de nuestro ambiente acogedor
+          </p>
+        </div>
+
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <!-- Slides -->
+            <div class="carousel-slide active">
+              <img
+                src="{% static 'shop/img/carrusel/carrusel1.jpeg' %}"
+                alt="Interior cafetería"
+                loading="lazy"
+              />
+              <div class="slide-caption">
+                <h3>Rincón de lectura</h3>
+                <p>Iluminación natural y sillones ergonómicos</p>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img
+                src="{% static 'shop/img/carrusel/carrusel2.jpeg' %}"
+                alt="Barra principal"
+                loading="lazy"
+              />
+              <div class="slide-caption">
+                <h3>Barra artesanal</h3>
+                <p>Nuestros baristas certificados</p>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img
+                src="{% static 'shop/img/carrusel/carrusel3.jpeg' %}"
+                alt="Terraza"
+                loading="lazy"
+              />
+              <div class="slide-caption">
+                <h3>Terraza jardín</h3>
+                <p>Ambiente al aire libre</p>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img
+                src="{% static 'shop/img/carrusel/carrusel4.jpeg' %}"
+                alt="Latte art"
+                loading="lazy"
+              />
+              <div class="slide-caption">
+                <h3>Arte en tu taza</h3>
+                <p>Diseños personalizados</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles -->
+          <button class="carousel-btn prev-btn" aria-label="Anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn next-btn" aria-label="Siguiente">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button class="indicator active" aria-label="Ir a slide 1"></button>
+            <button class="indicator" aria-label="Ir a slide 2"></button>
+            <button class="indicator" aria-label="Ir a slide 3"></button>
+            <button class="indicator" aria-label="Ir a slide 4"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories-section">
+        <h2 class="section-title">Nuestras Categorías Más Populares</h2>
+        <div class="categories-grid">
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/desayunos.jpeg' %}"
+              alt="Desayunos"
+            />
+            <p class="category-title">Desayunos</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/cafe_caliente.jpeg' %}"
+              alt="Café Caliente"
+            />
+            <p class="category-title">Café Caliente</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/cafe_helado.jpeg' %}"
+              alt="Café Helado"
+            />
+            <p class="category-title">Café Helado</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/pasteleria.jpeg' %}"
+              alt="Pastelería"
+            />
+            <p class="category-title">Pastelería</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/bebidas.jpeg' %}"
+              alt="Bebidas"
+            />
+            <p class="category-title">Bebidas</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/almuerzos.jpeg' %}"
+              alt="Almuerzos"
+            />
+            <p class="category-title">Almuerzos</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/tes_infusiones.jpeg' %}"
+              alt="Tés e Infusiones"
+            />
+            <p class="category-title">Tés e Infusiones</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/saludables.jpeg' %}"
+              alt="Postres Saludables"
+            />
+            <p class="category-title">Postres Saludables</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/smoothies.jpeg' %}"
+              alt="Smoothies"
+            />
+            <p class="category-title">Smoothies</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/postres.jpeg' %}"
+              alt="Postres"
+            />
+            <p class="category-title">Postres</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/bocadillos.jpeg' %}"
+              alt="Bocadillos"
+            />
+            <p class="category-title">Bocadillos</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="{% static 'shop/img/categories/waffles.jpeg' %}"
+              alt="Waffles"
+            />
+            <p class="category-title">Meriendas</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="call-to-action-section">
+        <h2 class="cta-title">¡Disfruta Espresso Coffee en Casa!</h2>
+        <p class="cta-description">
+          Ordena online y recibe tu café favorito donde quieras. ¡Es fácil,
+          rápido y delicioso!
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-white">Ordenar Ahora</a>
+          <a href="#" class="btn btn-transparent">Ver el Menú &rarr;</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Menú</a></li>
+            <li><a href="#">Ordena Online</a></li>
+            <li><a href="#">Promociones</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <a href="#" class="btn btn-secondary">Contáctenos &rarr;</a>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">
+          © Espresso Coffee 2025, Todos los derechos reservados
+        </div>
+      </div>
+    </footer>
+
+    <script src="{% static 'shop/js/script.js' %}"></script>
+  </body>
+</html>

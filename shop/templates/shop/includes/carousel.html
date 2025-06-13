@@ -1,0 +1,78 @@
+{% load static %}
+<section class="carousel-section">
+  <div class="section-header">
+    <h2 class="section-title">Nuestro Espacio, Tu Café</h2>
+    <p class="section-subtitle">
+      Explora las fotos de nuestro ambiente acogedor
+    </p>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- Slides -->
+      <div class="carousel-slide active">
+        <img
+          src="{% static 'shop/img/carrusel/carrusel1.jpeg' %}"
+          alt="Interior cafetería"
+          loading="lazy"
+        />
+        <div class="slide-caption">
+          <h3>Rincón de lectura</h3>
+          <p>Iluminación natural y sillones ergonómicos</p>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img
+          src="{% static 'shop/img/carrusel/carrusel2.jpeg' %}"
+          alt="Barra principal"
+          loading="lazy"
+        />
+        <div class="slide-caption">
+          <h3>Barra artesanal</h3>
+          <p>Nuestros baristas certificados</p>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img
+          src="{% static 'shop/img/carrusel/carrusel3.jpeg' %}"
+          alt="Terraza"
+          loading="lazy"
+        />
+        <div class="slide-caption">
+          <h3>Terraza jardín</h3>
+          <p>Ambiente al aire libre</p>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img
+          src="{% static 'shop/img/carrusel/carrusel4.jpeg' %}"
+          alt="Latte art"
+          loading="lazy"
+        />
+        <div class="slide-caption">
+          <h3>Arte en tu taza</h3>
+          <p>Diseños personalizados</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-btn prev-btn" aria-label="Anterior">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="carousel-btn next-btn" aria-label="Siguiente">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button class="indicator active" aria-label="Ir a slide 1"></button>
+      <button class="indicator" aria-label="Ir a slide 2"></button>
+      <button class="indicator" aria-label="Ir a slide 3"></button>
+      <button class="indicator" aria-label="Ir a slide 4"></button>
+    </div>
+  </div>
+</section>
