@@ -1,0 +1,19 @@
+{% load static %}
+<section class="hero">
+  <div class="background">
+    <img src="{% static 'shop/img/background.jpeg' %}" alt="coffee" />
+  </div>
+
+  <div class="hero-content">
+    <p class="subtitle">Disfruta de Aromas y Sabores Únicos</p>
+    <h1 class="hero-title">Espresso Coffee: Tu Experiencia de Café Ideal</h1>
+    <p class="description">
+      Descubre nuestra selección de café premium, deliciosos menús y promociones
+      exclusivas. Ordena y paga online de manera fácil y rápida.
+    </p>
+    <div class="hero-buttons">
+      <a href="#" class="btn btn-primary">Ordenar Ahora</a>
+      <a href="{% url 'menu'%}" class="btn btn-secondary">Ver el Menú &rarr;</a>
+    </div>
+  </div>
+</section>

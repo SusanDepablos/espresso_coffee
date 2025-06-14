@@ -1,0 +1,12 @@
+
+<section class="categories-section">
+  <h2 class="section-title">Nuestras Categorías Más Populares</h2>
+  <div class="categories-grid">
+    {% for category in categories %}
+    <div class="category-card">
+      <img src="{{ category.image_url }}" alt="{{ category.name|lower }}" />
+      <p class="category-title">{{ category.name }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

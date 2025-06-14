@@ -1,5 +1,29 @@
 from django.shortcuts import render
 from .models import *
+import requests
+from django.http import JsonResponse
+
+def precio_dolar_ves(request):
+    api_url = "https://api.exchangerate-api.com/v4/latest/USD"
+    
+    try:
+        # Hacer la solicitud a la API
+        response = requests.get(api_url)
+        data = response.json()
+        
+        # Extraer la tasa de cambio para VES (Bolívares)
+        tasa_ves = data.get('rates', {}).get('VES', 'No disponible')
+        
+        context = {
+            'precio_usd_ves': tasa_ves,
+            'fecha_actualizacion': data.get('date', 'N/A'),
+            'fuente': 'ExchangeRate-API',
+        }
+        
+        return render(request, 'shop/precio_dolar.html', context)
+    
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
 
 def index(request):
     categories = Category.objects.all()
